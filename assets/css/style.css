@@ -1,8 +1,8 @@
 #gc{
   position: absolute;
   border: 2px solid #555;
-  min-height: 90%;
-  min-width: 90%;
+  min-height: 900px;
+  min-width: 900px;
 }
 #red-block{
   background: red;
