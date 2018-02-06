@@ -12,6 +12,12 @@ $(document).ready(function() {
       axis: 'x',
       grid: [150,150],
       drag: function(){
+        if(collisionDetect()){
+          console.log('collision');
+          $("#redBlock").draggable( "option", "grid",[0,0]);
+        } else {
+          console.log('no collision');
+        }
       },
       stop: function() {
         turnIncrement();
@@ -27,6 +33,11 @@ $(document).ready(function() {
       axis: 'y',
       grid: [150,150],
       drag: function(){
+        if(collisionDetect()){
+          $(".selector").draggable("option", "grid",[0,0]);
+        } else {
+          console.log('no collision');
+        }
       },
       stop: turnIncrement
   });
@@ -36,12 +47,38 @@ $(document).ready(function() {
       containment:'parent',
       axis: 'x',
       grid: [150,150],
+      drag: function(){
+        if(collisionDetect()){
+          $(".selector").draggable( "option", "grid",[0,0]);
+        } else {
+          console.log('no collision');
+        }
+      },
       stop: turnIncrement
   });
 
   function turnIncrement(){
     totalTurns++;
     $turnCounter.html('Turns: '+totalTurns);
+  }
+  function collisionDetect(){
+    if(topRightCollision()||bottomRightCollision()||bottomLeftCollision()||topLeftCollision()){
+      return true;
+    } else {
+      return false;
+    }
+  }
+  function topRightCollision() {
+    return false;
+  }
+  function bottomRightCollision() {
+    return false;
+  }
+  function bottomLeftCollision() {
+    return false;
+  }
+  function topLeftCollision() {
+    return false;
   }
 
 });
