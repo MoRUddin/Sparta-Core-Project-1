@@ -1,20 +1,20 @@
 $(document).ready(function() {
-  var redBlock = new block(100,200,0,200,'red');
-  var orangeHorzOne = new block(100,300,0,0,'orange');
-  var orangeHorzTwo = new block(100,300,0,500,'orange');
-  var orangeHorzThree = new block(100,200,400,300,'orange');
-  var orangeVertOne = new block(300,100,200,100,'orange');
-  var orangeVertTwo = new block(200,100,0,300,'orange');
-  var orangeVertThree = new block(200,100,500,0,'orange');
-  var orangeVertFour = new block(200,100,400,400,'orange');
+  var redBlock = new block(100, 200, 0, 200, 'red');
+  var orange1 = new block(100, 300, 0, 0, 'orange');
+  var orange2 = new block(100, 300, 0, 500, 'orange');
+  var orange3 = new block(100, 200, 400, 300, 'orange');
+  var orange4 = new block(300, 100, 200, 100, 'orange');
+  var orange5 = new block(200, 100, 0, 300, 'orange');
+  var orange6 = new block(200, 100, 500, 0, 'orange');
+  var orange7 = new block(200, 100, 400, 400, 'orange');
   createBlock(redBlock);
-  createBlock(orangeHorzOne);
-  createBlock(orangeHorzTwo);
-  createBlock(orangeHorzThree);
-  createBlock(orangeVertOne);
-  createBlock(orangeVertTwo);
-  createBlock(orangeVertThree);
-  createBlock(orangeVertFour);
+  createBlock(orange1);
+  createBlock(orange2);
+  createBlock(orange3);
+  createBlock(orange4);
+  createBlock(orange5);
+  createBlock(orange6);
+  createBlock(orange7);
 
 });
 
@@ -44,7 +44,7 @@ function createBlock(block) {
     "top": block.posY,
     "background": block.color,
     "border": "2px solid #555",
-    "box-sizing" : "border-box"
-  }).addClass('block'+' '+block.direction);
+    "box-sizing": "border-box"
+  }).addClass('block' + ' ' + block.direction);
   $('.gcBody').append(newEl);
 }

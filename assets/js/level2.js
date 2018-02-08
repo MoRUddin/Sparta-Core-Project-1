@@ -1,20 +1,32 @@
 $(document).ready(function() {
-  var redBlock = new block(100,200,0,200,'red');
-  var orangeHorzOne = new block(100,300,0,0,'orange');
-  var orangeHorzTwo = new block(100,300,0,500,'orange');
-  var orangeHorzThree = new block(100,200,400,300,'orange');
-  var orangeVertOne = new block(300,100,200,100,'orange');
-  var orangeVertTwo = new block(200,100,0,300,'orange');
-  var orangeVertThree = new block(200,100,500,0,'orange');
-  var orangeVertFour = new block(200,100,400,400,'orange');
+  var redBlock = new block(100, 200, 300, 200, 'red');
+  var orange1 = new block(100, 200, 0, 0, 'orange');
+  var orange2 = new block(100, 200, 200, 00, 'orange');
+  var orange3 = new block(100, 200, 100, 100, 'orange');
+  var orange4 = new block(100, 200, 300, 100, 'orange');
+  var orange5 = new block(100, 200, 400, 400, 'orange');
+  var orange6 = new block(100, 300, 300, 500, 'orange');
+  var orange7 = new block(200, 100, 0, 100, 'orange');
+  var orange8 = new block(200, 100, 0, 300, 'orange');
+  var orange9 = new block(200, 100, 200, 200, 'orange');
+  var orange10 = new block(200, 100, 200, 400, 'orange');
+  var orange11 = new block(200, 100, 300, 300, 'orange');
+  var orange12 = new block(300, 100, 100, 200, 'orange');
+  var orange13 = new block(300, 100, 500, 0, 'orange');
   createBlock(redBlock);
-  createBlock(orangeHorzOne);
-  createBlock(orangeHorzTwo);
-  createBlock(orangeHorzThree);
-  createBlock(orangeVertOne);
-  createBlock(orangeVertTwo);
-  createBlock(orangeVertThree);
-  createBlock(orangeVertFour);
+  createBlock(orange1);
+  createBlock(orange2);
+  createBlock(orange3);
+  createBlock(orange4);
+  createBlock(orange5);
+  createBlock(orange6);
+  createBlock(orange7);
+  createBlock(orange8);
+  createBlock(orange9);
+  createBlock(orange10);
+  createBlock(orange11);
+  createBlock(orange12);
+  createBlock(orange13);
 
 });
 
@@ -38,13 +50,13 @@ var block = function(height, length, posX, posY, color) {
 function createBlock(block) {
   var newEl = $('<div></div>').css({
     "position": "absolute",
-    "min-height": block.height + "px",
-    "min-width": block.length + "px",
+    "height": block.height + "px",
+    "width": block.length + "px",
     "left": block.posX,
     "top": block.posY,
     "background": block.color,
     "border": "2px solid #555",
-    "box-sizing" : "border-box"
-  }).addClass('block'+' '+block.direction);
+    "box-sizing": "border-box"
+  }).addClass('block' + ' ' + block.direction);
   $('.gcBody').append(newEl);
 }
