@@ -74,7 +74,7 @@ $(document).ready(function() {
   $('html').on('mouseup', function() {
     $block.off('mousedirection');
     turnIncrement();
-    if($block[0].offsetLeft==400) { //win condition
+    if ($block[0].offsetLeft == 400) { //win condition
       alert('winner');
     }
   });
@@ -156,12 +156,17 @@ $(document).ready(function() {
   function yHorz(block, obstacle) {
     if (obstacle.offsetTop < block.offsetTop && block.offsetTop < obstacle.offsetTop + $(obstacle).outerHeight() || obstacle.offsetTop < block.offsetTop + $(block).outerHeight() && block.offsetTop + $(block).outerHeight() < obstacle.offsetTop + $(obstacle).outerHeight()) {
       return true;
+    } else if (obstacle.offsetTop == block.offsetTop && block.offsetTop + $(block).outerHeight() == obstacle.offsetTop + $(obstacle).outerHeight()) {
+      return true;
     } else {
       return false;
     }
   }
+
   function xVert(block, obstacle) {
     if (obstacle.offsetLeft < block.offsetLeft && block.offsetLeft < obstacle.offsetLeft + $(obstacle).outerWidth() || obstacle.offsetLeft < block.offsetLeft + $(block).outerWidth() && block.offsetLeft + $(block).outerWidth() < obstacle.offsetLeft + $(obstacle).outerWidth()) {
+      return true;
+    } else if (obstacle.offsetLeft == block.offsetLeft && block.offsetLeft + $(block).outerWidth() == obstacle.offsetLeft + $(obstacle).outerWidth()) {
       return true;
     } else {
       return false;
