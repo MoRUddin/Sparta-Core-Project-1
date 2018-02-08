@@ -26,6 +26,13 @@ var posY;
 var color;
 var $gcBody = $('.gcBody');
 
+var $song = new Audio('../assets/music/Beauty-and-the-Beast.mp3');
+$song.play().loop = true;
+$("a[name='mute']").on("click", function (e) {
+  $song.muted = true;
+  console.log('hi');
+});
+
 var block = function(height, length, posX, posY, color) {
   this.height = height;
   this.length = length;

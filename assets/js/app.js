@@ -71,7 +71,7 @@ $(document).ready(function() {
 
     } //end direction switch
   }); //end block mousedown listener
-  $('html').on('mouseup', function() {
+  $('.gc').on('mouseup', function() {
     $block.off('mousedirection');
     turnIncrement();
     if ($block[0].offsetLeft == 400) { //win condition
@@ -82,7 +82,7 @@ $(document).ready(function() {
   //increments turns taken and updates it to the screen.
   function turnIncrement() {
     totalTurns++;
-    $turnCounter.html('Turns: ' + totalTurns);
+    $turnCounter.html('<p>Turns: ' + totalTurns+'</p>');
   }
 
   function hasCollisionHorz(block) {

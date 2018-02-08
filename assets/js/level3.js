@@ -29,6 +29,8 @@ var posX;
 var posY;
 var color;
 var $gcBody = $('.gcBody');
+var $song = new Audio('../assets/music/Inochi-No-Namae.mp3')
+$song.play().loop = true;
 
 var block = function(height, length, posX, posY, color) {
   this.height = height;
