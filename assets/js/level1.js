@@ -38,8 +38,8 @@ var block = function(height, length, posX, posY, color) {
 function createBlock(block) {
   var newEl = $('<div></div>').css({
     "position": "absolute",
-    "min-height": block.height + "px",
-    "min-width": block.length + "px",
+    "height": block.height + "px",
+    "width": block.length + "px",
     "left": block.posX,
     "top": block.posY,
     "background": block.color,
