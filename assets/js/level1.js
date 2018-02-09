@@ -5,7 +5,7 @@ $(document).ready(function() {
   var orange3 = new block(100, 200, 400, 300, 'orange');
   var orange4 = new block(300, 100, 200, 100, 'orange');
   var orange5 = new block(200, 100, 0, 300, 'orange');
-  var orange6 = new block(200, 100, 500, 0, 'orange');
+  var orange6 = new block(300, 100, 500, 0, 'orange');
   var orange7 = new block(200, 100, 400, 400, 'orange');
   createBlock(redBlock);
   createBlock(orange1);
@@ -26,12 +26,13 @@ var posY;
 var color;
 var $gcBody = $('.gcBody');
 
-var $song = new Audio('../assets/music/Beauty-and-the-Beast.mp3');
-$song.play().loop = true;
-$("a[name='mute']").on("click", function (e) {
-  $song.muted = true;
-  console.log('hi');
-});
+var song = new Audio('../assets/music/Beauty-and-the-Beast.mp3');
+song.play();
+song.addEventListener('ended', function() {
+  this.currentTime = 0;
+  this.play();
+}, false);
+song.play();
 
 var block = function(height, length, posX, posY, color) {
   this.height = height;

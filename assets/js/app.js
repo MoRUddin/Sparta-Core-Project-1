@@ -75,14 +75,29 @@ $(document).ready(function() {
     $block.off('mousedirection');
     turnIncrement();
     if ($block[0].offsetLeft == 400) { //win condition
-      alert('winner');
+      $($block[0]).animate({
+        left: '600px',
+        width: '0px',
+        transition: '0.8s'
+      });
+      if (totalTurns == parseInt($('#perfectTurns').html().split(" ")[10])) { //checks for perfect score
+        $('.popup.perfect').show(300);
+        $('.popup').on('click', function() {
+          $('.popup').hide(300);
+        });
+      } else {
+        $('.popup.normal').show(300);
+        $('.popup').on('click', function() {
+          $('.popup').hide(300);
+        });
+      }
     }
   });
 
   //increments turns taken and updates it to the screen.
   function turnIncrement() {
     totalTurns++;
-    $turnCounter.html('<p>Turns: ' + totalTurns+'</p>');
+    $turnCounter.html('<p>Turns: ' + totalTurns + '</p>');
   }
 
   function hasCollisionHorz(block) {
