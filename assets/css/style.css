@@ -1,0 +1,134 @@
+@font-face {
+  font-family: BackTo1982;
+  src: url(../fonts/back-to-1982/BACKTO1982.TTF);
+}
+
+html {
+  font-family: BackTo1982, Helvetica;
+  color: orange;
+}
+
+body {
+  background-image: url(../images/bg.jpg);
+}
+
+.header {
+  font-size: 65px;
+  text-align: center;
+}
+
+.levels {
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.4;
+  cursor: default;
+}
+
+a:visited {
+  text-decoration: none;
+  color: orange;
+}
+
+p {
+  font-size: 25px;
+}
+
+.gc {
+  width: 100%;
+}
+
+.gcHead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 1em;
+}
+
+.gcBody {
+  margin: 0 30% 0 30%;
+  position: absolute;
+  border: 2px solid #555;
+  min-height: 600px;
+  min-width: 600px;
+  background: white;
+  opacity: 0.75;
+}
+
+.gcFoot {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0 0 0 0;
+}
+
+.instructions {
+  text-align: center;
+  font-size: 25px;
+}
+
+.popup {
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.content {
+  width: 500px;
+  height: 500px;
+  background: #555;
+  position: absolute;
+  left: 30%;
+  top: 15%;
+  font-size: 40px;
+}
+
+@media(max-width: 1200px) {
+  .header {
+    font-size: 50px;
+  }
+  .levels {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.red {
+  color: red;
+}
+
+@media(max-width: 1000px) {
+  .gcBody {
+    margin: 0 20% 0 20%;
+  }
+  p {
+    font-size: 20px;
+  }
+}
+
+@media(max-width: 850px) {
+  .gcBody {
+    margin: 0 10% 0 10%;
+  }
+  p {
+    font-size: 15px;
+  }
+  @media(max-width: 695px) {
+    .gcBody {
+      margin: 0 5% 0 5%;
+    }
+  }
+}
