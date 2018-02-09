@@ -37,7 +37,7 @@ var posX;
 var posY;
 var color;
 var $gcBody = $('.gcBody');
-var $song = new Audio('../assets/music/Inochi-No-Namae.mp3')
+var song = new Audio('../assets/music/Inochi-No-Namae.mp3')
 song.play();
 song.addEventListener('ended', function() {
   this.currentTime = 0;
