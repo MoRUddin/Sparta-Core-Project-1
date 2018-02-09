@@ -1,11 +1,21 @@
 # Sparta-Core-Project-1
 JavaScript UNBLOCK ME Game
 
+## Download instructions
+Method 1) Download the zip file and open index.html with your browser from [GitHub](https://github.com/MoRUddin/Sparta-Core-Project-1)
+
+Method 2) Click clone or download from [GitHub](https://github.com/MoRUddin/Sparta-Core-Project-1)
+<br>Copy the HTTPS link
+<br>Navigate to your disired install directory in terminal and install using the following command
+```
+  git clone git@github.com:MoRUddin/Sparta-Core-Project-1.git
+```
+
 ## The Task
 * create a browser game using the methods we've learnt over the past two weeks
 * incorporate agile practices
-* the project will be developed over github
-* user stories progress tracked using trello
+* the project will be developed over GitHub
+* user stories progress tracked using Trello
 
 ## My Game
 I designed my very own version of KIRA GAMES' Unblock Me, a spacial block sliding puzzle.
