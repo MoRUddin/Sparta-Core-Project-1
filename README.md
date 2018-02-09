@@ -6,7 +6,7 @@ Method 1) Download the zip file and open index.html with your browser from [GitH
 
 Method 2) Click clone or download from [GitHub](https://github.com/MoRUddin/Sparta-Core-Project-1)
 <br>Copy the HTTPS link
-<br>Navigate to your disired install directory in terminal and install using the following command
+<br>Navigate to your desired install directory in terminal and install using the following command
 ```
   git clone git@github.com:MoRUddin/Sparta-Core-Project-1.git
 ```
