@@ -1,5 +1,6 @@
 # Sparta-Core-Project-1
 JavaScript UNBLOCK ME Game
+[Play here](https://moruddin.github.io/Sparta-Core-Project-1/)
 
 ## Download instructions
 Method 1) Download the zip file and open index.html with your browser from [GitHub](https://github.com/MoRUddin/Sparta-Core-Project-1)
